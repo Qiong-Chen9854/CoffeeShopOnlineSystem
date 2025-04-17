@@ -66,7 +66,7 @@ CREATE TABLE recommendations (
 	score decimal,
 	CONSTRAINT PK_recommendations PRIMARY KEY(recommendation_id),
 	CONSTRAINT FK_recommendations_user FOREIGN KEY(user_id) REFERENCES users(user_id),
-	CONSTRAINT FK_recommendations_item FOREIGN KEY(item_id) REFERENCES menu_items(item_id)
+	CONSTRAINT FK_recommendations_item FOREIGN KEY(item_id) REFERENCES menu_items(item_id)	
 );
 
 COMMIT TRANSACTION;

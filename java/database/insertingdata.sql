@@ -1,8 +1,3 @@
-BEGIN TRANSACTION;
-
-INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
-INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
-
 -- Insert users
 INSERT INTO users (username, password_hash, role) VALUES
 ('alice', 'hashed_pw_1', 'customer'),
@@ -45,5 +40,3 @@ INSERT INTO product_views (user_id, item_id) VALUES
 INSERT INTO recommendations (user_id, item_id, score) VALUES
 (1, 2, 0.95),  -- Recommend Latte to Alice
 (2, 4, 0.90);  -- Recommend Croissant to Bob
-
-COMMIT TRANSACTION;
